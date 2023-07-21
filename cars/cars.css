@@ -7,7 +7,7 @@ main:{
     margin: 0;
 }
 
-h1 {
+h1 div{
     width: 100%;
     padding: 1em;
     background-image:url(./mizuiro.jpg);
