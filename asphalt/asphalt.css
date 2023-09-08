@@ -1,0 +1,85 @@
+/* styles.css */
+
+/* デフォルトのスタイル */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 36px;
+}
+
+.overview, .features, .how-to-play {
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.overview h2, .features h2, .how-to-play h2 {
+    color: #333;
+}
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* スマートフォン向けスタイル */
+@media screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+    .overview, .features, .how-to-play {
+        margin: 10px;
+        padding: 10px;
+    }
+    ul {
+        margin-left: 10px;
+    }
+}
+
+/* タブレット向けスタイル */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    header h1 {
+        font-size: 30px;
+    }
+    .overview, .features, .how-to-play {
+        margin: 15px;
+        padding: 15px;
+    }
+    ul {
+        margin-left: 15px;
+    }
+}
+
+/* デスクトップ向けスタイル */
+@media screen and (min-width: 1025px) {
+    header h1 {
+        font-size: 36px;
+    }
+    .overview, .features, .how-to-play {
+        margin: 20px;
+        padding: 20px;
+    }
+    ul {
+        margin-left: 20px;
+    }
+}
