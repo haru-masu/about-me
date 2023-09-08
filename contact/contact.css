@@ -1,0 +1,121 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
+
+h1 {
+    color: #007bff;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+}
+
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #888;
+    font-size: 16px;
+    pointer-events: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #007bff;
+}
+
+input:focus + label, textarea:focus + label, input:valid + label, textarea:valid + label {
+    transform: translateY(-25px) scale(0.85);
+    color: #007bff;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#success-message {
+    margin-top: 20px;
+    color: #007bff;
+}
+
+.hidden {
+    display: none;
+}
+/* スマホ向けのCSS */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    form {
+        margin-top: 10px;
+    }
+
+    .input-container {
+        margin-bottom: 10px;
+    }
+
+    input, textarea {
+        font-size: 14px;
+    }
+
+    label {
+        top: 5px;
+        left: 5px;
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    #success-message {
+        margin-top: 10px;
+    }
+}

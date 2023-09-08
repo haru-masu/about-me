@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>お問い合わせフォーム</title>
+    <link rel="stylesheet" href="./contact.css">
 </head>
 <body>
-    <h1>Contact</h1>
+    <div class="container">
+        <h1>お問い合わせ</h1>
+        <form id="contact-form">
+            <div class="input-container">
+                <input type="text" id="name" name="name" placeholder="お名前" required>
+                <label for="name">お名前</label>
+            </div>
+            <div class="input-container">
+                <input type="email" id="email" name="email" placeholder="メールアドレス" required>
+                <label for="email">メールアドレス</label>
+            </div>
+            <div class="input-container">
+                <textarea id="message" name="message" placeholder="お問い合わせ内容" rows="4" required></textarea>
+                <label for="message">お問い合わせ内容</label>
+            </div>
+            <button type="submit" id="submit-button">送信</button>
+        </form>
+        <div id="success-message" class="hidden">
+            <p>お問い合わせが送信されました。ありがとうございます。</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>

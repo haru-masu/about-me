@@ -1,0 +1,127 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #000;
+}
+
+/* Set a colorful background gradient for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #ff0066, #ff6600);
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+/* Style the container for the movie cards */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(0, 42, 255);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Style the movie cards */
+.movie-card {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style the movie images */
+.movie-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* Style the movie titles */
+h2 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Style the movie details */
+p {
+    margin-top: 5px;
+    color: #555;
+}
+
+/* Style the buttons */
+.details-button,
+.favorite-button {
+    background-color: #ff0066;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.details-button:hover,
+.favorite-button:hover {
+    background-color: #ff3300;
+}
+
+/* Style the details section */
+.details {
+    display: none;
+    margin-top: 10px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    text-align: left;
+}
+
+/* Style the favorite button when active */
+.favorite-button.active {
+    background-color: #ff0000;
+}
+
+/* Add a fade-in animation to the details section */
+.details.active {
+    display: block;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ここからレスポンシブ対応*/
+@media screen and (max-width: 600px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .movie-card {
+        padding: 10px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}
